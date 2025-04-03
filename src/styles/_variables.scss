@@ -1,0 +1,43 @@
+$primary: rgba(23, 24, 23, 1);
+$secondary: #aaa;
+$accent: rgb(202, 172, 3);
+
+$dark: #1d1d1d;
+
+$positive: #21ba45;
+$negative: #c10015;
+$info: #31ccec;
+$warning: #f2c037;
+
+
+$quantCol: 12;
+$colRange: 1, 2, 3, 4, 5, 6, 7, 9, 9, 10, 11, 12;
+$sizesRange: 1, 2, 3, 4, 5, 6, 7, 9, 9, 10, 11, 12, 13, 14, 15, 16, 17, 16, 20;
+$fator: 0.2em;
+
+$xs: 576px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// Extra small	xs <576px
+// Small	sm	≥576px
+// Medium	md	≥768px
+// Large	lg	≥992px
+// Extra large	xl	≥1200px
+// Extra extra large	xxl	≥1400px
+
+@font-face {
+    font-family: MyriadPro-Light;
+    src: url(./fonts/MyriadPro-Light.otf);
+}
+
+@font-face {
+    font-family: MYRIADPRO-REGULAR;
+    src: url(./fonts/MYRIADPRO-REGULAR.OTF);
+}
+
+$fontPrimary: MyriadPro-Light;
+$fontSecondary: MYRIADPRO-REGULAR;

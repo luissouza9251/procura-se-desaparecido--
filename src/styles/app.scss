@@ -1,0 +1,234 @@
+@import "./_variables.scss";
+/* --------------------------------------------- */
+@function multipliedSize($size) {
+  @return calc($size * $fator);
+}
+@function sizeCol() {
+  @return calc(100% / $quantCol);
+}
+/* --------------------------------------------- */
+@each $size in $sizesRange {
+  .ma-#{$size} {
+    margin: multipliedSize($size);
+  }
+  .mx-#{$size} {
+    margin: 0 multipliedSize($size);
+  }
+  .my-#{$size} {
+    margin: multipliedSize($size) 0;
+  }
+  .mt-#{$size} {
+    margin-top: multipliedSize($size);
+  }
+  .mb-#{$size} {
+    margin-bottom: multipliedSize($size);
+  }
+  .ml-#{$size} {
+    margin-left: multipliedSize($size);
+  }
+  .mr-#{$size} {
+    margin-right: multipliedSize($size);
+  }
+}
+.ma-auto {
+  margin: auto;
+}
+.mx-auto {
+  margin: 0 auto;
+}
+.my-auto {
+  margin: auto 0;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+
+/* --------------------------------------------- */
+@each $size in $sizesRange {
+  .pa-#{$size} {
+    padding: multipliedSize($size);
+  }
+  .px-#{$size} {
+    padding: 0 multipliedSize($size);
+  }
+  .py-#{$size} {
+    padding: multipliedSize($size) 0;
+  }
+  .pt-#{$size} {
+    padding-top: multipliedSize($size);
+  }
+  .pb-#{$size} {
+    padding-bottom: multipliedSize($size);
+  }
+  .pl-#{$size} {
+    padding-left: multipliedSize($size);
+  }
+  .pr-#{$size} {
+    padding-right: multipliedSize($size);
+  }
+}
+/* --------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #F2F3F4 ;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: $fontPrimary;
+  font-size: 1.1em;
+  text-rendering: optimizeLegibility;
+}
+h1,h2,h3,h4,h5{
+  font-family: $fontSecondary;
+}
+
+/* --------------------------------------------- */
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 100%;
+}
+
+/* --------------------------------------------- */
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+/* --------------------------------------------- */
+.align-items-end {
+	align-items: flex-end;
+}
+
+.align-content-flex-end {
+	align-content: flex-end;
+}
+/* --------------------------------------------- */
+
+@each $size in $colRange {
+  .col-#{$size} {
+    width: calc($size * sizeCol());
+  }
+}
+
+@media (max-width: $xs) {
+  @each $size in $colRange {
+    .col-xs-#{$size} {
+      width: calc($size * sizeCol());
+    }
+  }
+}
+
+@media (min-width: $sm)  {
+  @each $size in $colRange {
+    .col-sm-#{$size} {
+      width: calc($size * sizeCol());
+    }
+  }
+}
+
+@media (min-width: $md)  {
+  @each $size in $colRange {
+    .col-md-#{$size} {
+      width: calc($size * sizeCol());
+    }
+  }
+}
+
+@media (min-width: $lg)  {
+  @each $size in $colRange {
+    .col-lg-#{$size} {
+      width: calc($size * sizeCol());
+    }
+  }
+}
+
+@media (min-width: $xl)  {
+  @each $size in $colRange {
+    .col-xl-#{$size} {
+      width: calc($size * sizeCol());
+    }
+  }
+}
+
+@media (min-width: $xxl)  {
+  @each $size in $colRange {
+    .col-xxl-#{$size} {
+      width: calc($size * sizeCol());
+    }
+  }
+}
+
+.col{
+  width: min-content;
+}
+/* --------------------------------------------- */
+
+.background-color-white{
+    background-color: white;
+}
+
+.border-default {
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------------------------- */
+.text-primary{
+  color: $primary;
+}
+
+.text-secondary{
+  color: $secondary;
+}
+
+.text-accent{
+  color: $accent;
+}
+
+/* -------------------------------------------- */
