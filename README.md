@@ -19,6 +19,10 @@ Aplicação web para cadastro e busca de pessoas desaparecidas.
 	```bash
 	npm install
 	```
+3. **Rodar o projeto:**
+	```bash
+	npm run dev
+	```
 
 ## Como rodar com Docker
 
@@ -33,5 +37,4 @@ Aplicação web para cadastro e busca de pessoas desaparecidas.
 3. Acesse no navegador: [http://localhost:5173](http://localhost:5173)
 
 - Certifique-se de ter o [Docker](https://www.docker.com/) instalado.
-- Para ambiente de produção, ajuste variáveis de ambiente conforme necessário.
 
